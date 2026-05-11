@@ -115,5 +115,50 @@ int main(void)
 }
 */
 
+//printf a character:
+/*
+#include <stdio.h>
 
+int main(void)
+{
+    printf("       *\n");
+    printf("      *\n");
+    printf("     *\n");
+    printf("*   *\n");
+    printf(" * *\n");
+    printf("  *\n");
 
+    return 0;
+}
+*/
+
+//write a programme to calculate the volume of a sphere
+#include<stdio.h>
+
+int main(void)
+{
+    int radius;
+    float pi = 3.142592f;
+    float volume = 4.0f/3.0f*pi*radius*radius*radius;
+
+    printf("The Radius of the Sphere is: ");
+    scanf("%d", &radius);
+
+    printf("The Volume of the Sphere is %f", volume);
+
+    return 0;
+}
+
+//the formula of the prinf() function: 
+//printf(xxx, variable?, variable?);
+
+// %m.pX/-m.pX form is definated in printf().
+// percision in different data category:
+//d--10int, e--float in exponential form, .6X.
+//f--normal float, .6X, g--both e & f, without .000.
+//i--Octal(0NNN) & Hexadecimal(0xNNN) & normal int.
+
+//\a: alart. \b back. 
+//\n, \t tabular. \"="
+
+//be careful to use scanf() function.
