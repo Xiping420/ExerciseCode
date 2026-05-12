@@ -82,7 +82,7 @@ return 0;
 
 //remember: the macro-definition is always written as big letter
 
-/*#include <stdio.h>
+#include <stdio.h>
 
 #define FREEZING_PT 32.0f
 #define SCALE_FACTOR (5.0f / 9.0f)
@@ -99,12 +99,12 @@ int main(void)
     printf("Celsius equivalent: %.1f\n", celsius);
     
     return 0;
-}*/
+}
 
 // note will be replaced as a blank
 
 // what if int/float is not definated?
-/*#include <stdio.h>
+#include <stdio.h>
 
 int main(void)
 {
@@ -113,10 +113,9 @@ int main(void)
 
     return 0;
 }
-*/
 
 //printf a character:
-/*
+
 #include <stdio.h>
 
 int main(void)
@@ -130,7 +129,6 @@ int main(void)
 
     return 0;
 }
-*/
 
 //write a programme to calculate the volume of a sphere
 #include<stdio.h>
@@ -162,3 +160,42 @@ int main(void)
 //\n, \t tabular. \"="
 
 //be careful to use scanf() function.
+
+//+, -, *, /, %.
+//when combine int and float in calculating, the result is float.
+//pay attention to the implementation-defined behavior.
+
+#include<stdio.h>
+
+int main(void)
+{
+    int d, i1, i2, i3, i4, i5, j1, j2, j3, j4, j5,
+     first_sum, second_sum, total;
+    
+    printf("Enter the first (single) digit: ");
+    scanf("%1d", &d);
+    printf("Enter first group of five digits: ");
+    scanf("%1d%1d%1d%1d%1d", &i1, &i2, &i3, &i4, &i5);
+    printf("Enter second group of five digits: ");
+    scanf("%1d%1d%1d%1d%1d", &j1, &j2, &j3, &j4, &j5);
+
+    first_sum = d + i2 + i4 + j1 + j3 + j5;
+    second_sum = i1 + i3 + i5 + j2 + j4;
+    total = 9-( ( (first_sum * 3 + second_sum) -1) % 10);
+
+    printf("Check digit: %d\n", total);
+
+    return 0;
+
+}
+
+// i += 2 -- i = i + 2
+// -= / *= / /= / %=
+
+i = 1;
+printf("i is %d\n", ++i) /*"i is 2"*/
+printf("i is %d\n", i) /*"i is 2"*/
+
+i = 1;
+printf("i is %d\n", i++) /*"i is 1"*/
+printf("i is %d\n", i) /*"i is 2"*/
