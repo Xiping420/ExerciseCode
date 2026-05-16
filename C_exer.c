@@ -199,3 +199,31 @@ printf("i is %d\n", i) /*"i is 2"*/
 i = 1;
 printf("i is %d\n", i++) /*"i is 1"*/
 printf("i is %d\n", i) /*"i is 2"*/
+
+#include <stdio.h>
+
+int main(void){
+    float value;
+
+    printf("Please enter the value of the Trade: ");
+    scanf("%f", &value);
+
+    if (value < 2500)
+      printf("Commission: %.2f", (value*0.017) + 30);
+    else if (value >= 2500 && value < 6250)
+      printf("Commission: %.2f", (value*0.0066) + 56);
+    else if (value >= 6250 && value < 20000)
+      printf("Commission: %.2f", (value*0.0034) + 76);
+    else if (value >= 20000 && value < 50000)
+      printf("Commission: %.2f", (value*0.0022) + 100);
+    else if (value >= 50000 && value < 500000)
+      printf("Commission: %.2f", (value*0.0011) + 155);
+    else
+      printf("Commission: %.2f", (value*0.0009) + 255);
+    
+    if (((value*0.017) + 30) < 39.00f)
+      printf("Commission: 39.00");
+
+    return 0;
+}
+
