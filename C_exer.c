@@ -1,15 +1,14 @@
-/*** #include <stdio.h>
+#include <stdio.h>
 int main(void)
 {
     printf("to C or not to C, that's a question.\n");
     return 0;
 } 
-***/
 
 // %d is to present int variable;
 // %f is to present float variable;
 
-/* #include <stdio.h>
+#include <stdio.h>
 
 int main(void)
 {
@@ -19,11 +18,11 @@ printf ("Profit: $%f\n", profit);
 printf ("Profit: $%.2f\n", profit);
 printf ("Profit: $%.4f\n",profit);
 return 0;
-} */
+}
 
 // P15 exercise: dweight.c
 
-/*#include <stdio.h>
+#include <stdio.h>
 
 int main(void)
 {
@@ -39,11 +38,11 @@ printf("Dimentions: %dx%dx%d\n", height, length, width);
 printf("Volumn: %d\n", volumn);
 printf("Dimensional weight: %d\n", weight);
 return 0;
-} */
+} 
 
 // a prograssed form with float category
 
-/*#include <stdio.h>
+#include <stdio.h>
 
 int main(void)
 {
@@ -59,10 +58,10 @@ printf("Dimentions: %fx%fx%f\n", height, length, width);
 printf("Volumn: %f\n", volumn);
 printf("Dimensional weight: %f\n", weight);
 return 0;
-}*/
+}
 
 // P17 scanf form of previous code
-/*#include <stdio.h>
+#include <stdio.h>
 
 int main(void)
 {
@@ -78,7 +77,7 @@ scanf("%d", &width);
 printf("Volume: %d\n", height * length * width);
 printf("Weight: %d\n", ((height * length * width) + 165)/166);
 return 0;
-}*/
+}
 
 //remember: the macro-definition is always written as big letter
 
@@ -285,4 +284,34 @@ int main(void){
   printf(", %d", YEAR);
 
   return 0;
+}
+
+// while / do / for / break / continue / goto
+
+i = 1
+while (i < n)
+  i = i * 2
+    
+// construct infinite recursion
+
+//while (1)...
+
+#include<stdio.h>
+
+int main(void){
+
+  int num, n, square_num;
+
+  printf("This program prints a table of squares.\nEnter number of entries in table: ");
+  scanf("%d", &n);
+
+  num = 1;
+  while (num <= n)
+  {
+    printf("%d  %d\n", num, num * num);
+    num++;
+  }
+
+  return 0;
+  
 }
